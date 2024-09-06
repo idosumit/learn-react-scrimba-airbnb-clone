@@ -1,12 +1,11 @@
 import logo from "../src/assets/airbnb-logo.svg";
 
-function Navbar() {
+export default function Navbar() {
   return (
-    <nav>
-      <img src={logo} className="site-logo" width="50px" />
-      <h1>Heading Component from Navbar</h1>
-    </nav>
+    <div>
+      <nav>
+        <img src={logo} className="nav--logo" />
+      </nav>
+    </div>
   );
 }
-
-export default Navbar;
