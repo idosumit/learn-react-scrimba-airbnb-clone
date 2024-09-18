@@ -6,23 +6,13 @@ import data from "./data";
 
 function App() {
   const cards = data.map((input) => {
-    return (
-      <Card
-        key={input.id}
-        img={input.coverImg}
-        rating={input.stats.rating}
-        reviewCount={input.stats.reviewCount}
-        location={input.location}
-        title={input.title}
-        price={input.price}
-        openSpots={input.openSpots}
-      />
-    );
+    return <Card key={input.id} {...input} />;
   });
 
   return (
     <div>
       <Navbar />
+      <Hero />
       <section className="cards-list">{cards}</section>
     </div>
   );
